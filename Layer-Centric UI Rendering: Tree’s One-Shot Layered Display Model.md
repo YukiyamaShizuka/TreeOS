@@ -87,3 +87,5 @@ This model was born from a simple, profound idea during the development of TreeO
 > _“I render everything at once. Push to framebuffer. If a pixel’s not covered, it shows.”_
 
 That’s not optimization. That’s liberation.
+
+The iGPU can be heterogeneous in design: UI clusters handle text, interface, and general UI rendering; video decoding clusters process media encoding and playback. While these tasks are distributed across different bra branches within the system, they are physically integrated on the same chip. Large-scale game rendering is delegated to the Game-BRA, completely separate from the UI and video branches. No mixed rendering cluster is required for composition or layer resolution—layering, coordinate arbitration, and visibility are all handled structurally by the Display-BRA.
